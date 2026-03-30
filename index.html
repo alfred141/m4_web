@@ -1,11 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M4 計畫＝</title>
+    <title>M4 Project - Multi-stage Modular Medical Vision Foundation Model</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">M4</div>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">首頁</a></li>
+                <li><a href="#background">背景</a></li>
+                <li><a href="#objectives">目標</a></li>
+                <li><a href="#innovation">創新</a></li>
+                <li><a href="#pipeline">管道</a></li>
+                <li><a href="#milestone">里程碑</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-label">AI 醫療影像</div>
+            <h1 class="hero-title">M4 Project</h1>
+            <p class="hero-subtitle">多階段模組化醫療視覺基礎模型</p>
+            <p class="hero-description">
+                開發適應多院校環境的深度學習模型，
+                <br/>
+                以最少註解支持臨床研究與應用
+            </p>
+            <a href="#background" class="cta-button">探索更多</a>
+        </div>
+        <div class="hero-decoration">
+            <div class="geometric-shape shape-1"></div>
+            <div class="geometric-shape shape-2"></div>
+            <div class="geometric-shape shape-3"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Background Section -->
+        <section id="background" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2>背景與挑戰</h2>
+            </div>
+            <div class="section-content">
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">📊</div>
+                        <h3>數據稀缺性</h3>
+                        <p>醫療註解數據有限且昂貴，需要以少量註解實現穩定訓練和泛化。</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🔄</div>
+                        <h3>域移轉問題</h3>
+                        <p>不同醫院設備差異大，模型需要跨域適應能力以應對環境差異。</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">⚙️</div>
+                        <h3>自適應微調</h3>
+                        <p>在資源有限的情況下，實現高效的模型微調和個性化適應。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives Section -->
+        <section id="objectives" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2>項目目標</h2>
+            </div>
+            <div class="section-content">
+                <div class="objectives-list">
+                    <div class="objective-item">
+                        <div class="objective-marker"></div>
+                        <div class="objective-text">
+                            <h3>擴展預訓練過程</h3>
+                            <p>建立適合蒸餾模型的擴展預訓練過程，以增強域適應並降低退化風險。</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-marker"></div>
+                        <div class="objective-text">
+                            <h3>少樣本註解訓練</h3>
+                            <p>建立小規模註解訓練方法，以有限註解改善訓練效率。利用中介相關微調可以增強結果。</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <div class="objective-marker"></div>
+                        <div class="objective-text">
+                            <h3>跨校區驗證機制</h3>
+                            <p>建立跨醫院驗證機制，實施醫生在循環中，並支持臨床審查和反饋迭代。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Section -->
+        <section id="innovation" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2>核心創新</h2>
+            </div>
+            <div class="section-content">
+                <div class="innovation-grid">
+                    <div class="innovation-card">
+                        <div class="innovation-number">I</div>
+                        <h3>擴展預訓練</h3>
+                        <p>建立適合蒸餾模型的擴展預訓練過程，以增強域適應並降低退化風險。</p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-number">II</div>
+                        <h3>數據高效性</h3>
+                        <p>在有限註解數據下，採用中介微調和高效適應策略，實現穩定和泛化性能。</p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-number">III</div>
+                        <h3>特徵融合</h3>
+                        <p>整合 MAE Pixio 和 DINO 互補特徵，連接訓練模組進行整體優化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2>技術管道</h2>
+            </div>
+            <div class="section-content">
+                <div class="pipeline-timeline">
+                    <div class="pipeline-stage">
+                        <div class="stage-dot"></div>
+                        <div class="stage-content">
+                            <h3>階段 1</h3>
+                            <p class="stage-name">域適應預訓練 (DAP)</p>
+                            <p class="stage-detail">MAE-style Pixio × DINO v3</p>
+                            <p class="stage-modality">眼底鏡 • 內視鏡 • 心臟超聲</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage">
+                        <div class="stage-dot"></div>
+                        <div class="stage-content">
+                            <h3>階段 2</h3>
+                            <p class="stage-name">中介監督微調</p>
+                            <p class="stage-detail">為 MAE 和 DINO 分別微調中介任務</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage">
+                        <div class="stage-dot"></div>
+                        <div class="stage-content">
+                            <h3>階段 3</h3>
+                            <p class="stage-name">整體優化與驗證</p>
+                            <p class="stage-detail">醫生在循環中驗證反饋</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestone Section -->
+        <section id="milestone" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2>兩年里程碑</h2>
+            </div>
+            <div class="section-content">
+                <div class="milestone-grid">
+                    <div class="milestone-card">
+                        <div class="milestone-year">第一年</div>
+                        <ul class="milestone-list">
+                            <li>完成三種模態基礎模型預訓練</li>
+                            <li>完成單模式測試和驗證</li>
+                            <li>公開發布基準測試結果</li>
+                            <li>專利申請與論文發表</li>
+                        </ul>
+                    </div>
+                    <div class="milestone-divider"></div>
+                    <div class="milestone-card">
+                        <div class="milestone-year">第二年</div>
+                        <ul class="milestone-list">
+                            <li>完成多模態融合架構</li>
+                            <li>跨醫院驗證與回饋迭代</li>
+                            <li>臨床應用部署準備</li>
+                            <li>開源發布與社群建立</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer-section">
+            <div class="footer-content">
+                <p>Chang Gung University Artificial Intelligence Research Center</p>
+                <p class="footer-contact">
+                    <a href="mailto:contact@example.com">聯繫我們</a> • 
+                    <a href="#">查看論文</a> • 
+                    <a href="#">GitHub 倉庫</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close menu when link is clicked
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
