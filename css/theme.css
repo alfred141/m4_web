@@ -383,7 +383,7 @@ a:hover { color: var(--color-accent-hover); }
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  aspect-ratio: 4/3;
+  width: 100%;
 }
 .hero__image img {
   width: 100%;
@@ -398,7 +398,7 @@ a:hover { color: var(--color-accent-hover); }
   }
   .hero__content { max-width: 100%; }
   .hero__description { margin-inline: auto; }
-  .hero__image { order: -1; aspect-ratio: 16/9; }
+  .hero__image { order: -1; }
 }
 
 /* ── 6. Card Grids ──────────────────────────────────────────── */

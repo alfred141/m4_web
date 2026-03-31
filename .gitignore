@@ -1,0 +1,7 @@
+.DS_Store
+# Ignore duplicate images
+*\ 2.png
+*\ 2.jpg
+*\ 2.jpeg
+*\ 2.webp
+*\ 2.avif
