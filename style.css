@@ -428,30 +428,35 @@ body {
 /* ========== PIPELINE TIMELINE ========== */
 .pipeline-timeline {
     position: relative;
-    padding: 2rem 0;
+    padding: 2rem 0 2rem 4rem;
+    max-width: 100%;
 }
 
 .pipeline-timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 12px;
     top: 0;
     bottom: 0;
     width: 2px;
     background: var(--color-border);
-    transform: translateX(-50%);
 }
 
 .pipeline-stage {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     align-items: flex-start;
     gap: 2rem;
     animation: fadeIn 0.6s ease-out;
+    width: 100%;
 }
 
 .pipeline-stage:nth-child(odd) {
-    flex-direction: row-reverse;
+    flex-direction: row;
+}
+
+.pipeline-stage:nth-child(even) {
+    flex-direction: row;
 }
 
 .stage-dot {
@@ -461,16 +466,19 @@ body {
     border: 3px solid var(--color-text);
     border-radius: 50%;
     margin-top: 0.25rem;
+    margin-left: -4rem;
     flex-shrink: 0;
     position: relative;
     z-index: 10;
 }
 
 .stage-content {
-    width: calc(50% - 1rem);
+    flex: 1;
+    max-width: 100%;
     padding: 1.5rem;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
+    border-radius: 4px;
 }
 
 .stage-content h3 {
@@ -558,6 +566,77 @@ body {
     bottom: 0;
     width: 2px;
     background: linear-gradient(180deg, var(--color-text), var(--color-border), var(--color-text));
+}
+
+/* ========== TEAM SECTION ========== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    padding: 2rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-text), var(--color-highlight));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.team-card:hover {
+    background: white;
+    border-color: var(--color-text);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+.team-role {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-highlight);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.team-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--color-text);
+}
+
+.team-contact {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    font-weight: 500;
+    margin: 0.5rem 0;
+    word-break: break-all;
+}
+
+.team-expertise {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 1rem 0 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
 }
 
 /* ========== FOOTER SECTION ========== */
@@ -690,17 +769,35 @@ body {
         font-size: 1.8rem;
     }
 
+    .pipeline-timeline {
+        padding: 2rem 0 2rem 2rem;
+    }
+
     .pipeline-timeline::before {
         left: 12px;
     }
 
     .pipeline-stage {
         flex-direction: column !important;
+        margin-bottom: 0;
+        margin-left: 0;
+        gap: 1rem;
+        padding-left: 0;
+    }
+
+    .stage-dot {
+        margin-left: 0;
+        margin-bottom: 0;
     }
 
     .stage-content {
         width: 100%;
         margin-left: 0;
+        max-width: 100%;
+    }
+
+    .pipeline-connector {
+        display: none;
     }
 
     .milestone-grid {
@@ -724,6 +821,10 @@ body {
     }
 
     .innovation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
         grid-template-columns: 1fr;
     }
 }
