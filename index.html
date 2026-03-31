@@ -1,323 +1,964 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M4 Project - Multi-stage Modular Medical Vision Foundation Model</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">M4</div>
-            <button class="nav-toggle" id="navToggle">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#hero">首頁</a></li>
-                <li><a href="#background">背景</a></li>
-                <li><a href="#objectives">目標</a></li>
-                <li><a href="#innovation">創新</a></li>
-                <li><a href="#pipeline">管道</a></li>
-                <li><a href="#milestone">里程碑</a></li>
-                <li><a href="#team">團隊</a></li>
-            </ul>
-        </div>
-    </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M4 計畫 — 多階段模組化醫療視覺基礎模型</title>
+    <meta
+      name="description"
+      content="多階段模組化醫療視覺基礎模型（Multistage Modular Medical Models），長庚大學人工智慧研究中心。"
+    />
 
-    <!-- Hero Section -->
-    <header id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-label">AI 醫療影像</div>
-            <h1 class="hero-title">M4 Project</h1>
-            <p class="hero-subtitle">多階段模組化醫療視覺基礎模型</p>
-            <p class="hero-description">
-                開發適應多院校環境的深度學習模型，
-                <br/>
-                以最少註解支持臨床研究與應用
-            </p>
-            <a href="#background" class="cta-button">探索更多</a>
+    <!-- Favicon -->
+    <link rel="icon" sizes="32x32" href="images/cropped-logo-32x32.png" />
+    <link rel="apple-touch-icon" href="images/cropped-logo-180x180.png" />
+
+    <!-- Theme stylesheet -->
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+    <!-- ── Navigation ── -->
+    <header class="site-nav" role="banner">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="index.html" aria-label="M4計畫 首頁">
+          <img
+            class="site-nav__logo"
+            src="images/截圖-2026-03-12-22.49.05.png"
+            alt=""
+            width="28"
+            height="28"
+          />
+          <span class="site-nav__site-name">M4 計畫</span>
+        </a>
+
+        <button
+          class="site-nav__toggle"
+          aria-expanded="false"
+          aria-controls="site-nav-menu"
+          aria-label="開啟選單"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M3 7h18M3 12h18M3 17h18" />
+          </svg>
+        </button>
+
+        <div class="site-nav__menu" id="site-nav-menu">
+          <ul class="site-nav__links" role="list">
+            <li>
+              <a class="site-nav__link" href="#team-introduction">團隊介紹</a>
+            </li>
+            <li>
+              <a
+                class="site-nav__link site-nav__link--external"
+                href="https://www.cgu.edu.tw/aic/Subject?nodeId=12884"
+                target="_blank"
+                rel="noopener"
+                >徵聘資訊</a
+              >
+            </li>
+            <li>
+              <a
+                class="site-nav__link site-nav__link--external"
+                href="https://www.cgu.edu.tw/aic/Subject?nodeId=7143"
+                target="_blank"
+                rel="noopener"
+                >最新消息</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="#related-organizations"
+                >相關機構</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="#academic-conference">學術會議</a>
+            </li>
+          </ul>
+          <!-- <div class="site-nav__lang">
+          <a class="site-nav__lang-btn site-nav__lang-btn--active" href="index.html">
+            <img src="images/tw.png" alt="" width="16" height="12" />
+            繁體中文
+          </a>
+          <a class="site-nav__lang-btn" href="https://m4.alfredchen.tw/en/" target="_blank" rel="noopener">
+            <img src="images/us.png" alt="" width="16" height="12" />
+            English
+          </a>
+        </div> -->
         </div>
-        <div class="hero-decoration">
-            <div class="geometric-shape shape-1"></div>
-            <div class="geometric-shape shape-2"></div>
-            <div class="geometric-shape shape-3"></div>
-        </div>
+      </div>
     </header>
 
-    <main>
-        <!-- Background Section -->
-        <section id="background" class="content-section">
-            <div class="section-header">
-                <div class="section-number">01</div>
-                <h2>背景與挑戰</h2>
+    <main id="main-content">
+      <!-- ── Hero ── -->
+      <section class="hero" aria-label="首頁主視覺">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow">長庚大學人工智慧研究中心</span>
+            <h1 class="hero__title">
+              多階段模組化<br />醫療視覺<br />基礎模型
+              <span class="hero__title-en"
+                >Multistage Modular Medical Models</span
+              >
+            </h1>
+            <p class="hero__subtitle">M4 計畫</p>
+            <p class="hero__description">
+              我們的目標是打造一套能跨院區、少量標註也能穩定運作的多模態醫療影像
+              AI 模型，幫助臨床研究和醫療應用。
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#team-introduction"
+                >認識我們的團隊</a
+              >
+              <a
+                class="btn btn--outline"
+                href="https://www.twaicoe.org/medical-model-beyond-scaling-a-modular-foundation-model-approach-for-medical-visual-understanding/"
+                target="_blank"
+                rel="noopener"
+                >國科會計畫頁面</a
+              >
             </div>
-            <div class="section-content">
-                <div class="challenge-grid">
-                    <div class="challenge-card">
-                        <h3>數據稀缺性</h3>
-                        <p>醫療註解數據有限且昂貴，需要以少量註解實現穩定訓練和泛化。</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3>域移轉問題</h3>
-                        <p>不同醫院設備差異大，模型需要跨域適應能力以應對環境差異。</p>
-                    </div>
-                    <div class="challenge-card">
-                        <h3>自適應微調</h3>
-                        <p>在資源有限的情況下，實現高效的模型微調和個性化適應。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <figure class="hero__image">
+            <img
+              src="images/E3-scaled-e1773392782258.jpg"
+              alt="M4 計畫團隊"
+              width="800"
+              height="600"
+            />
+          </figure>
+        </div>
+      </section>
 
-        <!-- Objectives Section -->
-        <section id="objectives" class="content-section">
-            <div class="section-header">
-                <div class="section-number">02</div>
-                <h2>項目目標</h2>
+      <!-- ── 01 背景與挑戰 ── -->
+      <section
+        class="section section--alt"
+        id="background"
+        aria-labelledby="section-01-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">01</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Context</p>
+                <h2 class="section__title" id="section-01-title">背景與挑戰</h2>
+              </div>
             </div>
-            <div class="section-content">
-                <div class="objectives-list">
-                    <div class="objective-item">
-                        <div class="objective-marker"></div>
-                        <div class="objective-text">
-                            <h3>擴展預訓練過程</h3>
-                            <p>建立適合蒸餾模型的擴展預訓練過程，以增強域適應並降低退化風險。</p>
-                        </div>
-                    </div>
-                    <div class="objective-item">
-                        <div class="objective-marker"></div>
-                        <div class="objective-text">
-                            <h3>少樣本註解訓練</h3>
-                            <p>建立小規模註解訓練方法，以有限註解改善訓練效率。利用中介相關微調可以增強結果。</p>
-                        </div>
-                    </div>
-                    <div class="objective-item">
-                        <div class="objective-marker"></div>
-                        <div class="objective-text">
-                            <h3>跨校區驗證機制</h3>
-                            <p>建立跨醫院驗證機制，實施醫生在循環中，並支持臨床審查和反饋迭代。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">挑戰 1</span>
+              <h3 class="feat-card__title">
+                資料稀缺性<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Scarcity</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                醫學標註資料少且昂貴，需要在少量標註下仍能穩定訓練與泛化。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">挑戰 2</span>
+              <h3 class="feat-card__title">
+                跨域轉移<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Domain shift</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                不同醫院、設備的資料分布差異大，模型表現不一致。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">挑戰 3</span>
+              <h3 class="feat-card__title">
+                自適應微調困難<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Adaptive fine-tuning</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                已蒸餾的大模型再做延伸訓練可能破壞通用特徵，調整不易。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Innovation Section -->
-        <section id="innovation" class="content-section">
-            <div class="section-header">
-                <div class="section-number">03</div>
-                <h2>核心創新</h2>
+      <!-- ── 02 計畫目標 ── -->
+      <section
+        class="section"
+        id="objectives"
+        aria-labelledby="section-02-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">02</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Objectives</p>
+                <h2 class="section__title" id="section-02-title">
+                  計畫目標與工作範疇
+                </h2>
+              </div>
             </div>
-            <div class="section-content">
-                <div class="innovation-grid">
-                    <div class="innovation-card">
-                        <div class="innovation-number">I</div>
-                        <h3>擴展預訓練</h3>
-                        <p>建立適合蒸餾模型的擴展預訓練過程，以增強域適應並降低退化風險。</p>
-                    </div>
-                    <div class="innovation-card">
-                        <div class="innovation-number">II</div>
-                        <h3>數據高效性</h3>
-                        <p>在有限註解數據下，採用中介微調和高效適應策略，實現穩定和泛化性能。</p>
-                    </div>
-                    <div class="innovation-card">
-                        <div class="innovation-number">III</div>
-                        <h3>特徵融合</h3>
-                        <p>整合 MAE Pixio 和 DINO 互補特徵，連接訓練模組進行整體優化。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">目標 1</span>
+              <h3 class="feat-card__title">延伸預訓練流程</h3>
+              <p class="feat-card__body">
+                建立適合蒸餾模型的延伸預訓練流程，提高 domain adaption
+                並降低退化風險。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">目標 2</span>
+              <h3 class="feat-card__title">少量標註訓練</h3>
+              <p class="feat-card__body">
+                建立少量標註訓練方法，提升少量標註下的訓練效率，利用中介相關微調，可改善結果。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">目標 3</span>
+              <h3 class="feat-card__title">跨院區驗證機制</h3>
+              <p class="feat-card__body">
+                建立跨院區驗證機制，導入
+                doctor-in-the-loop，支援臨床檢視與回饋迭代。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Pipeline Section -->
-        <section id="pipeline" class="content-section">
-            <div class="section-header">
-                <div class="section-number">04</div>
-                <h2>技術管道</h2>
+      <!-- ── 03 核心創新 ── -->
+      <section
+        class="section section--alt"
+        id="innovations"
+        aria-labelledby="section-03-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">03</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Innovation</p>
+                <h2 class="section__title" id="section-03-title">核心創新</h2>
+              </div>
             </div>
-            <div class="section-content">
-                <div class="pipeline-timeline">
-                    <div class="pipeline-stage">
-                        <div class="stage-dot"></div>
-                        <div class="stage-content">
-                            <h3>階段 1</h3>
-                            <p class="stage-name">域適應預訓練 (DAP)</p>
-                            <p class="stage-detail">MAE-style Pixio × DINO v3</p>
-                            <p class="stage-modality">眼底鏡 • 內視鏡 • 心臟超聲</p>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-stage">
-                        <div class="stage-dot"></div>
-                        <div class="stage-content">
-                            <h3>階段 2</h3>
-                            <p class="stage-name">中介監督微調</p>
-                            <p class="stage-detail">為 MAE 和 DINO 分別微調中介任務</p>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-stage">
-                        <div class="stage-dot"></div>
-                        <div class="stage-content">
-                            <h3>階段 3</h3>
-                            <p class="stage-name">整體優化與驗證</p>
-                            <p class="stage-detail">醫生在循環中驗證反饋</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">創新 1</span>
+              <h3 class="feat-card__title">延伸預訓練流程</h3>
+              <p class="feat-card__body">
+                建立適合蒸餾模型的延伸預訓練流程，提高 domain adaption
+                並降低退化風險。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">創新 2</span>
+              <h3 class="feat-card__title">少量標註及資料效率</h3>
+              <p class="feat-card__body">
+                面對標註資料有限的情境，採用中介微調與高效率適配策略，讓模型以較少標註即可達到穩定且具泛化的表現。
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">創新 3</span>
+              <h3 class="feat-card__title">特徵融合與整體優化</h3>
+              <p class="feat-card__body">
+                融合 MAE Pixio 與 DINO
+                互補特徵，將各訓練模組串連進行整體優化，提升跨模態一致性與後續臨床驗證可用性。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Milestone Section -->
-        <section id="milestone" class="content-section">
-            <div class="section-header">
-                <div class="section-number">05</div>
-                <h2>兩年里程碑</h2>
+      <!-- ── 04 階段化訓練流程 ── -->
+      <section class="section" id="pipeline" aria-labelledby="section-04-title">
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">04</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Training Pipeline</p>
+                <h2 class="section__title" id="section-04-title">
+                  階段化訓練流程
+                </h2>
+              </div>
             </div>
-            <div class="section-content">
-                <div class="milestone-grid">
-                    <div class="milestone-card">
-                        <div class="milestone-year">第一年</div>
-                        <ul class="milestone-list">
-                            <li>完成三種模態基礎模型預訓練</li>
-                            <li>完成單模式測試和驗證</li>
-                            <li>公開發布基準測試結果</li>
-                            <li>專利申請與論文發表</li>
-                        </ul>
-                    </div>
-                    <div class="milestone-divider"></div>
-                    <div class="milestone-card">
-                        <div class="milestone-year">第二年</div>
-                        <ul class="milestone-list">
-                            <li>完成多模態融合架構</li>
-                            <li>跨醫院驗證與回饋迭代</li>
-                            <li>臨床應用部署準備</li>
-                            <li>開源發布與社群建立</li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+          <div class="pipeline">
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S1</span>
+                <span class="pipeline__label">Stage 1</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">自監督領域適配預訓練 (DAP)</h3>
+                <p class="pipeline__detail">Pixio (MAE-style) × DINO (v3)</p>
+                <p class="pipeline__meta">三種模態：Fundus, Endoscopy, Echo</p>
+              </div>
             </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="content-section">
-            <div class="section-header">
-                <div class="section-number">06</div>
-                <h2>團隊介紹</h2>
-            </div>
-            <div class="section-content">
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="team-role">中心主任 / 教授</div>
-                        <h3>林 貴傑</h3>
-                        <p class="team-contact">klin@cgu.edu.tw</p>
-                        <p class="team-expertise">電腦視覺、物聯網、服務導向運算、即時系統、分散式系統</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">中心副主任 / 教授</div>
-                        <h3>王 有中</h3>
-                        <p class="team-contact">wycc@cgu.edu.tw</p>
-                        <p class="team-expertise">嵌入式系統、機器學習</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">技術推廣團隊領導 / 助理教授</div>
-                        <h3>林 英嘉</h3>
-                        <p class="team-contact">yjlin@cgu.edu.tw</p>
-                        <p class="team-expertise">自然語言處理、大型語言模型、醫療文本挖掘、視覺-語言模型、序列標記</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究員</div>
-                        <h3>張 英豐</h3>
-                        <p class="team-contact">yfchang@mail.cgu.edu.tw</p>
-                        <p class="team-expertise">機器學習的生物醫學應用、數據分析、生物傳感器、核酸擴增技術</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究員</div>
-                        <h3>闕 冠華</h3>
-                        <p class="team-contact">chchueh@cgu.edu.tw</p>
-                        <p class="team-expertise">機器學習、人工智慧、智慧製造應用</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究員 / 助理教授</div>
-                        <h3>周 福強</h3>
-                        <p class="team-contact">fcc@cgu.edu.tw</p>
-                        <p class="team-expertise">數字信號處理、生物醫學信號、語音識別和合成、智慧健康應用</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究工程師</div>
-                        <h3>劉 健良</h3>
-                        <p class="team-contact">liucl@cgu.edu.tw</p>
-                        <p class="team-expertise">機器學習、深度學習、自然語言處理</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究工程師</div>
-                        <h3>陳 冠宇</h3>
-                        <p class="team-contact">im@alfredchen.tw</p>
-                        <p class="team-expertise">HPC、AI DevOps、信息安全、網路工程、高可靠性</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究工程師</div>
-                        <h3>王 博昀</h3>
-                        <p class="team-contact">bojyun.wang@cgu.edu.tw</p>
-                        <p class="team-expertise">自然語言處理、大型語言模型、深度學習、模型蒸餾</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">研究工程師</div>
-                        <h3>高 嘉隆</h3>
-                        <p class="team-contact">clkaoc@cgu.edu.tw</p>
-                        <p class="team-expertise">機器學習</p>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-role">博士生</div>
-                        <h3>袁 聖博</h3>
-                        <p class="team-contact">winterdanielyuan@gmail.com</p>
-                        <p class="team-expertise">AI、機器學習、深度學習、電腦視覺、臨床醫學、醫療影像、分散式系統</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer Section -->
-        <section class="footer-section">
-            <div class="footer-content">
-                <p>Chang Gung University Artificial Intelligence Research Center</p>
-                <p class="footer-contact">
-                    <a href="mailto:contact@example.com">聯繫我們</a> • 
-                    <a href="#">查看論文</a> • 
-                    <a href="#">GitHub 倉庫</a>
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S2</span>
+                <span class="pipeline__label">Stage 2</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">
+                  中介監督微調 (Intermediate Supervised Fine-tuning)
+                </h3>
+                <p class="pipeline__detail">
+                  針對 MAE Pixio 與 DINO 分別進行中介任務微調
                 </p>
+              </div>
             </div>
-        </section>
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S3</span>
+                <span class="pipeline__label">Stage 3</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">
+                  特徵融合與整體優化 (Feature Fusion &amp; Overall Optimization)
+                </h3>
+                <p class="pipeline__detail">
+                  整體模型優化，結合 Doctor-in-the-loop 驗證反饋
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 05 兩年期里程碑 ── -->
+      <section
+        class="section section--alt"
+        id="milestones-section"
+        aria-labelledby="section-05-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">05</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Roadmap</p>
+                <h2 class="section__title" id="section-05-title">
+                  兩年期里程碑
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="milestones">
+            <div class="milestone">
+              <span class="milestone__year">第一年</span>
+              <h3 class="milestone__title">完成三種模態基礎預訓練模型與測試</h3>
+              <ul class="milestone__items">
+                <li>完成三種模態基礎預訓練模型與測試</li>
+                <li>公開釋出模型基準測試結果</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <span class="milestone__year">第二年</span>
+              <h3 class="milestone__title">建置 Doctor-in-the-Loop 原型系統</h3>
+              <ul class="milestone__items">
+                <li>建置 doctor-in-the-loop 原型系統</li>
+                <li>
+                  結合跨院區 pilot 測試，完成合規文件化與臨床驗證前準備報告
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 06 團隊介紹 ── -->
+      <section
+        class="section"
+        id="team-introduction"
+        aria-labelledby="section-06-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">06</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Team</p>
+                <h2 class="section__title" id="section-06-title">團隊介紹</h2>
+              </div>
+            </div>
+          </div>
+          <div class="team-grid">
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/8145feb1-9708-4ad5-87f3-121fce575968-edited-1-591x600.jpg"
+                  alt="林桂傑 教授"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">林桂傑</h3>
+              <p class="member-card__role">中心主任 / 教授</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://faculty.sites.uci.edu/klin/"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:klin@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                電腦視覺、物聯網、服務導向運算、即時系統、分散式系統
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/be84da31-3fab-41fd-8dde-f7ce2281baea-edited-596x600.jpg"
+                  alt="王佑中 教授"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">王佑中</h3>
+              <p class="member-card__role">中心副主任 / 教授</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/ai/FullTimeProfessorManagement/Detail/d333ffe8-af47-4b45-a85a-c0e6c5568bb9"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:wycc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">嵌入式系統、機器學習</p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/61e68821-8cb5-4e25-8ddf-5277ef7bdc0d-edited-1-593x600.jpg"
+                  alt="林英嘉 助理教授"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">林英嘉</h3>
+              <p class="member-card__role">技術推廣組長 / 助理教授</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://yingjialin.org/about/"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:yjlin@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                自然語言處理、大型語言模型、醫學文字探勘
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/73c68562-c8c8-46f1-aa8c-1861c3284c4e-edited-593x600.jpg"
+                  alt="張英風 研究員"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">張英風</h3>
+              <p class="member-card__role">研究員</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/aic/ContentSection?nodeId=13252"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:yfchang@mail.cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                機器學習的生物醫學應用、多重光學生物傳感器
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/e7cb84a3-ef7b-44e3-8228-aa56aeb4a3d0-edited-595x600.jpg"
+                  alt="闕壯華 研究員"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">闕壯華</h3>
+              <p class="member-card__role">研究員</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://pure.lib.cgu.edu.tw/zh/persons/chuang-hua-chueh/"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:chchueh@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                機器學習、人工智慧、智慧製造應用
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/8311835c-bbb5-4063-a563-0d819028b270-edited-600x595.jpg"
+                  alt="周福強 助理教授"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">周福強</h3>
+              <p class="member-card__role">研究員 / 助理教授</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/ai/FullTimeProfessorManagement/Detail/e3cfc1b6-9017-42ef-8f43-b96c3e9e0db4"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:fcc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                數位信號處理、語音辨識與合成、智慧健康與醫療應用
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/73595bcc-d071-40c9-ad40-d05525def06b-edited-600x600.jpg"
+                  alt="劉建良 研究工程師"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">劉建良</h3>
+              <p class="member-card__role">研究工程師</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://nail1021734.github.io"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:liucl@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                機器學習、深度學習、自然語言處理
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/6846e7ce-2af5-483e-a012-dae6585ef5ab.png"
+                  alt="陳冠宇 研究工程師"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">陳冠宇</h3>
+              <p class="member-card__role">研究工程師</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="http://alfredchen.tw"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:im@alfredchen.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                HPC、AI DevOps、資訊安全、網路工程
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/bojyun.wang_.jpg"
+                  alt="王柏鈞 研究工程師"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">王柏鈞</h3>
+              <p class="member-card__role">研究工程師</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://bojyunwang.me"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:bojyun.wang@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                自然語言處理、大型語言模型、模型蒸餾
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/S__14401619-edited-593x600.jpg"
+                  alt="高嘉隆 研究工程師"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">高嘉隆</h3>
+              <p class="member-card__role">研究工程師</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://cguaickao.github.io/my-personal-site/"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a class="member-card__link" href="mailto:clkaoc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">機器學習</p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/717179.jpg"
+                  alt="袁聖博 博士生"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">袁聖博</h3>
+              <p class="member-card__role">博士生</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://winterbelieve.github.io"
+                  target="_blank"
+                  rel="noopener"
+                  >個人網站</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:winterdanielyuan@gmail.com"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                人工智慧、電腦視覺、醫學影像、基礎模型
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 07 國科會計畫 ── -->
+      <section
+        class="section section--alt"
+        id="nstc-project"
+        aria-labelledby="section-07-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">07</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">NSTC</p>
+                <h2 class="section__title" id="section-07-title">
+                  國科會計畫介紹頁面
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center; padding-block: var(--space-8)">
+            <a
+              class="btn btn--secondary"
+              href="https://www.twaicoe.org/medical-model-beyond-scaling-a-modular-foundation-model-approach-for-medical-visual-understanding/"
+              target="_blank"
+              rel="noopener"
+            >
+              國科會計畫介紹連結 ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 08 學術會議 ── -->
+      <section
+        class="section"
+        id="academic-conference"
+        aria-labelledby="section-08-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">08</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Academic Events</p>
+                <h2 class="section__title" id="section-08-title">學術會議</h2>
+              </div>
+            </div>
+          </div>
+          <div class="feature-block">
+            <figure class="feature-block__image">
+              <img
+                src="images/截圖-2026-03-12-22.49.05.png"
+                alt="2025 亞洲機器學習會議"
+                style="
+                  width: 100%;
+                  height: 320px;
+                  object-fit: contain;
+                  background: #f5f5f7;
+                  padding: 2rem;
+                "
+              />
+            </figure>
+            <div class="feature-block__content">
+              <h3 class="feature-block__title">
+                <a
+                  href="https://m4.alfredchen.tw/zh/acml-2025-medical-ai-forum/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  2025 亞洲機器學習會議
+                </a>
+              </h3>
+              <p class="feature-block__body">
+                本研討會聚焦於人工智慧在醫療領域的應用與挑戰。近年來，大規模基礎模型（foundation
+                models）在機器學習中取得重大突破，並展現出強大的泛化能力。然而，醫療影像領域因隱私限制、資料來源異質、樣本數有限及標註成本高等因素，難以直接套用此類模型與「規模化法則」。本活動旨在促進
+                AI
+                與醫療專家的跨領域交流，探討小規模醫療資料的模型設計、多模態學習、智慧醫療助理與醫師輔助系統，以及醫療機器人等議題。
+              </p>
+              <a
+                class="btn btn--primary"
+                href="https://m4.alfredchen.tw/zh/acml-2025-medical-ai-forum/"
+                target="_blank"
+                rel="noopener"
+              >
+                了解更多
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 09 相關機構 ── -->
+      <section
+        class="section section--alt"
+        id="related-organizations"
+        aria-labelledby="section-09-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">09</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Partners</p>
+                <h2 class="section__title" id="section-09-title">相關機構</h2>
+              </div>
+            </div>
+          </div>
+          <div class="org-logos">
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/aic"
+              target="_blank"
+              rel="noopener"
+              aria-label="長庚大學人工智慧研究中心"
+            >
+              <img
+                src="images/226cbf55-707f-4b74-88eb-61a390e760e2-600x169.png"
+                alt="長庚大學人工智慧研究中心"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/"
+              target="_blank"
+              rel="noopener"
+              aria-label="長庚大學"
+            >
+              <img src="images/cgu-logo-1-600x113.png" alt="長庚大學" />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/coic"
+              target="_blank"
+              rel="noopener"
+              aria-label="CGU COIC"
+            >
+              <img
+                src="images/4ee66042-3178-4016-bbb7-baea58725ab8.jpeg"
+                alt="CGU COIC"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/ai"
+              target="_blank"
+              rel="noopener"
+              aria-label="CGU AI"
+            >
+              <img
+                src="images/d25dd5d4-6817-4722-bfb2-2a04997943f7.png"
+                alt="CGU AI"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.twaicoe.org/"
+              target="_blank"
+              rel="noopener"
+              aria-label="AICоE"
+            >
+              <img src="images/aicoe-logo.png" alt="AICоE" />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.nstc.gov.tw/?l=ch"
+              target="_blank"
+              rel="noopener"
+              aria-label="國家科學及技術委員會"
+            >
+              <img
+                src="images/國科會標誌組合JPG-e1773390820565-600x108.jpg"
+                alt="國家科學及技術委員會"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- ── Footer ── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <p class="site-footer__name">M4 計畫</p>
+            <p class="site-footer__tagline">
+              M4
+              是一個專為醫療影像打造的「多階段模組化基礎模型架構」，透過延伸預訓練、少量標註學習與特徵融合技術，建立具高度泛化能力與跨院區適應性的醫療視覺模型。
+            </p>
+            <p class="site-footer__org">長庚大學人工智慧研究中心</p>
+          </div>
+          <nav class="site-footer__nav" aria-label="頁尾導覽">
+            <p class="site-footer__nav-title">站內連結</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="#team-introduction">團隊介紹</a></li>
+              <li>
+                <a
+                  href="https://www.cgu.edu.tw/aic/Subject?nodeId=12884"
+                  target="_blank"
+                  rel="noopener"
+                  >徵聘資訊</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.cgu.edu.tw/aic/Subject?nodeId=7143"
+                  target="_blank"
+                  rel="noopener"
+                  >最新消息</a
+                >
+              </li>
+              <li><a href="#academic-conference">學術會議</a></li>
+              <li><a href="#related-organizations">相關機構</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-footer__bottom">
+          <p class="site-footer__copy">
+            © 2026 長庚大學人工智慧研究中心 · Multistage Modular Medical Models
+          </p>
+          <div class="site-footer__links">
+            <a href="#">隱私政策</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile nav toggle -->
     <script>
-        // Mobile Navigation Toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        // Close menu when link is clicked
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
+      (function () {
+        var btn = document.querySelector(".site-nav__toggle");
+        var menu = document.querySelector(".site-nav__menu");
+        if (!btn || !menu) return;
+        btn.addEventListener("click", function () {
+          var open = menu.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", String(open));
         });
-
-        // Scroll effect for navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.boxShadow = 'none';
-            }
+        menu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            menu.classList.remove("is-open");
+            btn.setAttribute("aria-expanded", "false");
+          });
         });
+      })();
     </script>
-</body>
+  </body>
 </html>
