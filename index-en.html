@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M4 Project — Multistage Modular Medical Models</title>
+    <meta
+      name="description"
+      content="Multistage Modular Medical Models (M4), Artificial Intelligence Research Center, Chang Gung University."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="32x32" href="images/cropped-logo-32x32.png" />
+    <link rel="apple-touch-icon" href="images/cropped-logo-180x180.png" />
+
+    <!-- Theme stylesheet -->
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ── Navigation ── -->
+    <header class="site-nav" role="banner">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="index-en.html" aria-label="M4 Project Homepage">
+          <img
+            class="site-nav__logo"
+            src="images/截圖-2026-03-12-22.49.05.png"
+            alt=""
+            width="28"
+            height="28"
+          />
+          <span class="site-nav__site-name">M4 Project</span>
+        </a>
+
+        <button
+          class="site-nav__toggle"
+          aria-expanded="false"
+          aria-controls="site-nav-menu"
+          aria-label="Open menu"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M3 7h18M3 12h18M3 17h18" />
+          </svg>
+        </button>
+
+        <div class="site-nav__menu" id="site-nav-menu">
+          <ul class="site-nav__links" role="list">
+            <li>
+              <a class="site-nav__link" href="#team-introduction">Team</a>
+            </li>
+            <li>
+              <a
+                class="site-nav__link site-nav__link--external"
+                href="https://www.cgu.edu.tw/aic/Subject?nodeId=12884"
+                target="_blank"
+                rel="noopener"
+                >Recruitment</a
+              >
+            </li>
+            <li>
+              <a
+                class="site-nav__link site-nav__link--external"
+                href="https://www.cgu.edu.tw/aic/Subject?nodeId=7143"
+                target="_blank"
+                rel="noopener"
+                >News</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="#related-organizations"
+                >Partners</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="#academic-conference">Events</a>
+            </li>
+          </ul>
+          <!-- <div class="site-nav__lang">
+          <a class="site-nav__lang-btn site-nav__lang-btn--active" href="index.html">
+            <img src="images/tw.png" alt="" width="16" height="12" />
+            繁體中文
+          </a>
+          <a class="site-nav__lang-btn" href="https://m4.alfredchen.tw/en/" target="_blank" rel="noopener">
+            <img src="images/us.png" alt="" width="16" height="12" />
+            English
+          </a>
+        </div> -->
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ── Hero ── -->
+      <section class="hero" aria-label="Homepage Hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow">AI Research Center, Chang Gung University</span>
+            <h1 class="hero__title">
+              Multistage Modular<br />Medical Vision<br />Foundation Models
+              <span class="hero__title-en"
+                >Multistage Modular Medical Models</span
+              >
+            </h1>
+            <p class="hero__subtitle">M4 Project</p>
+            <p class="hero__description">
+              Our goal is to build a multimodal medical imaging AI model capable of working consistently across hospitals with minimal annotations, advancing clinical research and medical applications.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#team-introduction"
+                >Meet Our Team</a
+              >
+              <a
+                class="btn btn--outline"
+                href="https://www.twaicoe.org/medical-model-beyond-scaling-a-modular-foundation-model-approach-for-medical-visual-understanding/"
+                target="_blank"
+                rel="noopener"
+                >NSTC Project Page</a
+              >
+            </div>
+          </div>
+          <figure class="hero__image">
+            <img
+              src="images/E3-scaled-e1773392782258.jpg"
+              alt="M4 Project Team"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ── 01 Background and Challenges ── -->
+      <section
+        class="section section--alt"
+        id="background"
+        aria-labelledby="section-01-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">01</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Context</p>
+                <h2 class="section__title" id="section-01-title">Background and Challenges</h2>
+              </div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">Challenge 1</span>
+              <h3 class="feat-card__title">
+                Data Scarcity<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Scarcity</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                Medical annotation data is limited and expensive, requiring stable training and generalization with minimal annotations.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Challenge 2</span>
+              <h3 class="feat-card__title">
+                Domain Shift<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Domain shift</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                Large data distribution differences across hospitals and equipment result in inconsistent model performance.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Challenge 3</span>
+              <h3 class="feat-card__title">
+                Adaptive Fine-tuning Difficulty<br /><small
+                  style="font-weight: 400; color: var(--color-text-tertiary)"
+                  >Adaptive fine-tuning</small
+                >
+              </h3>
+              <p class="feat-card__body">
+                Extended training of distilled large models may compromise universal features, making adjustment difficult.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 02 Project Goals ── -->
+      <section
+        class="section"
+        id="objectives"
+        aria-labelledby="section-02-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">02</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Objectives</p>
+                <h2 class="section__title" id="section-02-title">
+                  Project Goals and Scope
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">Goal 1</span>
+              <h3 class="feat-card__title">Extended Pre-training Framework</h3>
+              <p class="feat-card__body">
+                Establish an extended pre-training workflow suitable for distilled models, improving domain adaptation and reducing degradation risk.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Goal 2</span>
+              <h3 class="feat-card__title">Few-shot Annotation Training</h3>
+              <p class="feat-card__body">
+                Develop few-shot annotation training methods to improve training efficiency with minimal annotations, leveraging intermediate fine-tuning to enhance results.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Goal 3</span>
+              <h3 class="feat-card__title">Cross-hospital Validation Mechanism</h3>
+              <p class="feat-card__body">
+                Establish a cross-hospital validation mechanism incorporating doctor-in-the-loop to support clinical review and iterative feedback.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 03 Core Innovation ── -->
+      <section
+        class="section section--alt"
+        id="innovations"
+        aria-labelledby="section-03-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">03</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Innovation</p>
+                <h2 class="section__title" id="section-03-title">Core Innovations</h2>
+              </div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="feat-card">
+              <span class="feat-card__number">Innovation 1</span>
+              <h3 class="feat-card__title">Extended Pre-training Framework</h3>
+              <p class="feat-card__body">
+                Establish an extended pre-training workflow suitable for distilled models, improving domain adaptation and reducing degradation risk.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Innovation 2</span>
+              <h3 class="feat-card__title">Few-shot Annotation and Data Efficiency</h3>
+              <p class="feat-card__body">
+                Facing limited annotation scenarios, we employ intermediate fine-tuning and efficient adaptation strategies, enabling models to achieve stable and generalizable performance with minimal annotations.
+              </p>
+            </article>
+            <article class="feat-card">
+              <span class="feat-card__number">Innovation 3</span>
+              <h3 class="feat-card__title">Feature Fusion and Holistic Optimization</h3>
+              <p class="feat-card__body">
+                Fusing complementary features from MAE Pixio and DINO, linking training modules for holistic optimization, enhancing cross-modal consistency and clinical validation utility.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 04 Staged Training Pipeline ── -->
+      <section class="section" id="pipeline" aria-labelledby="section-04-title">
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">04</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Training Pipeline</p>
+                <h2 class="section__title" id="section-04-title">
+                  Staged Training Pipeline
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="pipeline">
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S1</span>
+                <span class="pipeline__label">Stage 1</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Self-Supervised Domain Adaptation Pre-training (DAP)</h3>
+                <p class="pipeline__detail">Pixio (MAE-style) × DINO (v3)</p>
+                <p class="pipeline__meta">Three modalities: Fundus, Endoscopy, Echo</p>
+              </div>
+            </div>
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S2</span>
+                <span class="pipeline__label">Stage 2</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">
+                  Intermediate Supervised Fine-tuning
+                </h3>
+                <p class="pipeline__detail">
+                  Intermediate task fine-tuning of MAE Pixio and DINO respectively
+                </p>
+              </div>
+            </div>
+            <div class="pipeline__item">
+              <div class="pipeline__badge">
+                <span class="pipeline__step-num">S3</span>
+                <span class="pipeline__label">Stage 3</span>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">
+                  Feature Fusion &amp; Overall Optimization
+                </h3>
+                <p class="pipeline__detail">
+                  Holistic model optimization combined with Doctor-in-the-loop validation feedback
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 05 Two-year Milestones ── -->
+      <section
+        class="section section--alt"
+        id="milestones-section"
+        aria-labelledby="section-05-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">05</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Roadmap</p>
+                <h2 class="section__title" id="section-05-title">
+                  Two-Year Milestones
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="milestones">
+            <div class="milestone">
+              <span class="milestone__year">Year 1</span>
+              <h3 class="milestone__title">Complete Three-Modality Foundation Pre-training Models and Testing</h3>
+              <ul class="milestone__items">
+                <li>Complete three-modality foundation pre-training models and testing</li>
+                <li>Public release of model benchmark test results</li>
+              </ul>
+            </div>
+            <div class="milestone">
+              <span class="milestone__year">Year 2</span>
+              <h3 class="milestone__title">Establish Doctor-in-the-Loop Prototype System</h3>
+              <ul class="milestone__items">
+                <li>Establish doctor-in-the-loop prototype system</li>
+                <li>
+                  Complete cross-hospital pilot testing, compliance documentation, and clinical validation preparation report
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 06 Team Introduction ── -->
+      <section
+        class="section"
+        id="team-introduction"
+        aria-labelledby="section-06-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">06</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Team</p>
+                <h2 class="section__title" id="section-06-title">Team</h2>
+              </div>
+            </div>
+          </div>
+          <div class="team-grid">
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/8145feb1-9708-4ad5-87f3-121fce575968-edited-1-591x600.jpg"
+                  alt="Prof. Kuei-Chieh Lin"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Kuei-Chieh Lin</h3>
+              <p class="member-card__role">Director / Professor</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://faculty.sites.uci.edu/klin/"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:klin@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Computer Vision, Internet of Things, Service-Oriented Computing, Real-Time Systems, Distributed Systems
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/be84da31-3fab-41fd-8dde-f7ce2281baea-edited-596x600.jpg"
+                  alt="Prof. Y.-C. Wang"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Y.-C. Wang</h3>
+              <p class="member-card__role">Associate Director / Professor</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/ai/FullTimeProfessorManagement/Detail/d333ffe8-af47-4b45-a85a-c0e6c5568bb9"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:wycc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">Embedded Systems, Machine Learning</p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/61e68821-8cb5-4e25-8ddf-5277ef7bdc0d-edited-1-593x600.jpg"
+                  alt="Asst. Prof. Ying-Chia Lin"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Ying-Chia Lin</h3>
+              <p class="member-card__role">Technology Transfer Lead / Assistant Professor</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://yingjialin.org/about/"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:yjlin@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Natural Language Processing, Large Language Models, Medical Text Mining
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/73c68562-c8c8-46f1-aa8c-1861c3284c4e-edited-593x600.jpg"
+                  alt="Researcher Ying-Feng Zhang"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Ying-Feng Zhang</h3>
+              <p class="member-card__role">Researcher</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/aic/ContentSection?nodeId=13252"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:yfchang@mail.cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Biomedical Machine Learning Applications, Multiple Optical Biosensors
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/e7cb84a3-ef7b-44e3-8228-aa56aeb4a3d0-edited-595x600.jpg"
+                  alt="Researcher Chuang-Hua Chueh"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Chuang-Hua Chueh</h3>
+              <p class="member-card__role">Researcher</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://pure.lib.cgu.edu.tw/zh/persons/chuang-hua-chueh/"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:chchueh@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Machine Learning, Artificial Intelligence, Intelligent Manufacturing Applications
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/8311835c-bbb5-4063-a563-0d819028b270-edited-600x595.jpg"
+                  alt="Asst. Prof. Fu-Chiang Chou"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Fu-Chiang Chou</h3>
+              <p class="member-card__role">Researcher / Assistant Professor</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://www.cgu.edu.tw/ai/FullTimeProfessorManagement/Detail/e3cfc1b6-9017-42ef-8f43-b96c3e9e0db4"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:fcc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Digital Signal Processing, Speech Recognition and Synthesis, Intelligent Healthcare and Medical Applications
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/73595bcc-d071-40c9-ad40-d05525def06b-edited-600x600.jpg"
+                  alt="Research Engineer Jian-Liang Liu"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Jian-Liang Liu</h3>
+              <p class="member-card__role">Research Engineer</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://nail1021734.github.io"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:liucl@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Machine Learning, Deep Learning, Natural Language Processing
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/6846e7ce-2af5-483e-a012-dae6585ef5ab.png"
+                  alt="Research Engineer Guan-Yu Chen"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Guan-Yu Chen</h3>
+              <p class="member-card__role">Research Engineer</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="http://alfredchen.tw"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:im@alfredchen.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                HPC, AI DevOps, Information Security, Network Engineering
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/bojyun.wang_.jpg"
+                  alt="Research Engineer Bo-Jun Wang"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Bo-Jun Wang</h3>
+              <p class="member-card__role">Research Engineer</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://bojyunwang.me"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:bojyun.wang@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Natural Language Processing, Large Language Models, Model Distillation
+              </p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/S__14401619-edited-593x600.jpg"
+                  alt="Research Engineer Jia-Long Kao"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Jia-Long Kao</h3>
+              <p class="member-card__role">Research Engineer</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://cguaickao.github.io/my-personal-site/"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a class="member-card__link" href="mailto:clkaoc@cgu.edu.tw"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">Machine Learning</p>
+            </article>
+
+            <article class="member-card">
+              <div class="member-card__photo">
+                <img
+                  src="images/717179.jpg"
+                  alt="PhD Student Sheng-Bo Yuan"
+                  width="96"
+                  height="96"
+                />
+              </div>
+              <h3 class="member-card__name">Sheng-Bo Yuan</h3>
+              <p class="member-card__role">PhD Student</p>
+              <div class="member-card__links">
+                <a
+                  class="member-card__link"
+                  href="https://winterbelieve.github.io"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+                <a
+                  class="member-card__link"
+                  href="mailto:winterdanielyuan@gmail.com"
+                  >Email</a
+                >
+              </div>
+              <p class="member-card__specialties">
+                Artificial Intelligence, Computer Vision, Medical Imaging, Foundation Models
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 07 NSTC Project ── -->
+      <section
+        class="section section--alt"
+        id="nstc-project"
+        aria-labelledby="section-07-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">07</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">NSTC</p>
+                <h2 class="section__title" id="section-07-title">
+                  NSTC Project Information
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center; padding-block: var(--space-8)">
+            <a
+              class="btn btn--secondary"
+              href="https://www.twaicoe.org/medical-model-beyond-scaling-a-modular-foundation-model-approach-for-medical-visual-understanding/"
+              target="_blank"
+              rel="noopener"
+            >
+              NSTC Project Information Link ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 08 Academic Events ── -->
+      <section
+        class="section"
+        id="academic-conference"
+        aria-labelledby="section-08-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">08</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Academic Events</p>
+                <h2 class="section__title" id="section-08-title">Events</h2>
+              </div>
+            </div>
+          </div>
+          <div class="feature-block">
+            <figure class="feature-block__image">
+              <img
+                src="photos/ACML 2025- Medical AI Workshop/20251212-082.jpg"
+                alt="2025 Asian Conference on Machine Learning"
+                style="
+                  width: 100%;
+                  height: 320px;
+                  object-fit: cover;
+                  padding: 1rem;
+                  border-radius: 40px;
+                "
+              />
+            </figure>
+            <div class="feature-block__content">
+              <h3 class="feature-block__title">
+                <a
+                  href="https://m4.alfredchen.tw/zh/acml-2025-medical-ai-forum/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  2025 Asian Conference on Machine Learning
+                </a>
+              </h3>
+              <p class="feature-block__body">
+                This symposium focuses on the application and challenges of artificial intelligence in the medical field. In recent years, large-scale foundation models have achieved significant breakthroughs in machine learning and demonstrated strong generalization capabilities. However, the medical imaging field faces challenges due to privacy restrictions, heterogeneous data sources, limited sample sizes, and high annotation costs, making it difficult to directly apply such models and the scaling law. This event aims to promote cross-disciplinary collaboration between AI and medical experts to explore topics such as model design for small-scale medical data, multimodal learning, intelligent medical assistants and physician-support systems, and medical robotics.
+              </p>
+              <a
+                class="btn btn--primary"
+                href="https://m4.alfredchen.tw/zh/acml-2025-medical-ai-forum/"
+                target="_blank"
+                rel="noopener"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 09 Partner Organizations ── -->
+      <section
+        class="section section--alt"
+        id="related-organizations"
+        aria-labelledby="section-09-title"
+      >
+        <div class="container">
+          <div class="section__header">
+            <div class="section-label">
+              <span class="section-label__num" aria-hidden="true">09</span>
+              <div class="section-label__text">
+                <p class="section__eyebrow">Partners</p>
+                <h2 class="section__title" id="section-09-title">Partners</h2>
+              </div>
+            </div>
+          </div>
+          <div class="org-logos">
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/aic"
+              target="_blank"
+              rel="noopener"
+              aria-label="AI Research Center, Chang Gung University"
+            >
+              <img
+                src="images/226cbf55-707f-4b74-88eb-61a390e760e2-600x169.png"
+                alt="AI Research Center, Chang Gung University"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Chang Gung University"
+            >
+              <img src="images/cgu-logo-1-600x113.png" alt="Chang Gung University" />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/coic"
+              target="_blank"
+              rel="noopener"
+              aria-label="CGU COIC"
+            >
+              <img
+                src="images/4ee66042-3178-4016-bbb7-baea58725ab8.jpeg"
+                alt="CGU COIC"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.cgu.edu.tw/ai"
+              target="_blank"
+              rel="noopener"
+              aria-label="CGU AI"
+            >
+              <img
+                src="images/d25dd5d4-6817-4722-bfb2-2a04997943f7.png"
+                alt="CGU AI"
+              />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.twaicoe.org/"
+              target="_blank"
+              rel="noopener"
+              aria-label="AICоE"
+            >
+              <img src="images/AICOE.png" alt="AICоE" />
+            </a>
+            <a
+              class="org-logos__item"
+              href="https://www.nstc.gov.tw/?l=ch"
+              target="_blank"
+              rel="noopener"
+              aria-label="National Science and Technology Council"
+            >
+              <img
+                src="images/國科會標誌組合JPG-e1773390820565-600x108.jpg"
+                alt="National Science and Technology Council"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <p class="site-footer__name">M4 Project</p>
+            <p class="site-footer__tagline">
+              M4 is a "multistage modular foundation model architecture" designed specifically for medical imaging. Through extended pre-training, few-shot learning, and feature fusion technologies, it establishes medical vision models with high generalization capability and cross-hospital adaptability.
+            </p>
+            <p class="site-footer__org">AI Research Center, Chang Gung University</p>
+          </div>
+          <nav class="site-footer__nav" aria-label="Footer navigation">
+            <p class="site-footer__nav-title">Site Links</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="#team-introduction">Team</a></li>
+              <li>
+                <a
+                  href="https://www.cgu.edu.tw/aic/Subject?nodeId=12884"
+                  target="_blank"
+                  rel="noopener"
+                  >Recruitment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.cgu.edu.tw/aic/Subject?nodeId=7143"
+                  target="_blank"
+                  rel="noopener"
+                  >News</a
+                >
+              </li>
+              <li><a href="#academic-conference">Events</a></li>
+              <li><a href="#related-organizations">Partners</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-footer__bottom">
+          <p class="site-footer__copy">
+            © 2026 AI Research Center, Chang Gung University · Multistage Modular Medical Models
+          </p>
+          <div class="site-footer__links">
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile nav toggle -->
+    <script>
+      (function () {
+        var btn = document.querySelector(".site-nav__toggle");
+        var menu = document.querySelector(".site-nav__menu");
+        if (!btn || !menu) return;
+        btn.addEventListener("click", function () {
+          var open = menu.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", String(open));
+        });
+        menu.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            menu.classList.remove("is-open");
+            btn.setAttribute("aria-expanded", "false");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
